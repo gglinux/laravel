@@ -18,3 +18,13 @@ Route::get('/', function () {
 Route::auth();
 
 Route::get('/home', 'HomeController@index');
+
+Route::get('/hello/{id}',function($id){
+	echo "hello".$id;
+});
+
+Route::any('test',function(){
+	return 'Test';
+});
+
+Route::get('/hello', 'HomeController@hello');
